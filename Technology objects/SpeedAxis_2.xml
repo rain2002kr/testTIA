@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V18" />
+  <SW.TechnologicalObjects.TechnologicalInstanceDB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <DBAccessibleFromOPCUA>true</DBAccessibleFromOPCUA>
+      <DBAccessibleFromWebserver>true</DBAccessibleFromWebserver>
+      <InstanceOfName>TO_SpeedAxis</InstanceOfName>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Base">
+    <Sections Datatype="TO_Axis" Version="7.0">
+      <Section Name="Base">
+        <Sections Datatype="TO_Object" Version="7.0">
+          <Section Name="Input" />
+          <Section Name="Output" />
+          <Section Name="InOut" />
+          <Section Name="Static" />
+        </Sections>
+      </Section>
+      <Section Name="Input" />
+      <Section Name="Output" />
+      <Section Name="InOut" />
+      <Section Name="Static" />
+    </Sections>
+  </Section>
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="Velocity" Datatype="LReal" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="Acceleration" Datatype="LReal" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="ActualSpeed" Datatype="LReal" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="VelocitySetpoint" Datatype="LReal" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="Actor" Datatype="TO_Struct_Actor" Version="7.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="Type" Datatype="DInt" />
+          <Member Name="InverseDirection" Datatype="Bool" />
+          <Member Name="DataAdaption" Datatype="DInt" />
+          <Member Name="Efficiency" Datatype="LReal" />
+          <Member Name="MotorType" Datatype="DInt" />
+          <Member Name="Interface" Datatype="TO_Struct_ActorInterface" Version="7.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="AddressIn" Datatype="VREF" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="RID" Datatype="DWord" />
+                      <Member Name="AREA" Datatype="Byte" />
+                      <Member Name="DB_NUMBER" Datatype="UInt" />
+                      <Member Name="OFFSET" Datatype="UDInt" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="AddressOut" Datatype="VREF" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="RID" Datatype="DWord" />
+                      <Member Name="AREA" Datatype="Byte" />
+                      <Member Name="DB_NUMBER" Datatype="UInt" />
+                      <Member Name="OFFSET" Datatype="UDInt" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="EnableDriveOutput" Datatype="Bool" />
+                <Member Name="EnableDriveOutputAddress" Datatype="VREF" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="RID" Datatype="DWord" />
+                      <Member Name="AREA" Datatype="Byte" />
+                      <Member Name="DB_NUMBER" Datatype="UInt" />
+                      <Member Name="OFFSET" Datatype="UDInt" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="DriveReadyInput" Datatype="Bool" />
+                <Member Name="DriveReadyInputAddress" Datatype="VREF" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="RID" Datatype="DWord" />
+                      <Member Name="AREA" Datatype="Byte" />
+                      <Member Name="DB_NUMBER" Datatype="UInt" />
+                      <Member Name="OFFSET" Datatype="UDInt" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="EnableTorqueData" Datatype="Bool" />
+                <Member Name="TorqueDataAddressIn" Datatype="VREF" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="RID" Datatype="DWord" />
+                      <Member Name="AREA" Datatype="Byte" />
+                      <Member Name="DB_NUMBER" Datatype="UInt" />
+                      <Member Name="OFFSET" Datatype="UDInt" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="TorqueDataAddressOut" Datatype="VREF" Version="1.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="RID" Datatype="DWord" />
+                      <Member Name="AREA" Datatype="Byte" />
+                      <Member Name="DB_NUMBER" Datatype="UInt" />
+                      <Member Name="OFFSET" Datatype="UDInt" />
+                    </Section>
+                  </Sections>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="DriveParameter" Datatype="TO_Struct_ActorDriveParameter" Version="7.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="ReferenceSpeed" Datatype="LReal" />
+                <Member Name="MaxSpeed" Datatype="LReal" />
+                <Member Name="ReferenceTorque" Datatype="LReal" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="LinearMotorDriveParameter" Datatype="TO_Struct_LinearMotorActorDriveParameter" Version="7.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="ReferenceVelocity" Datatype="LReal" />
+                <Member Name="MaxVelocity" Datatype="LReal" />
+                <Member Name="ReferenceForce" Datatype="LReal" />
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="TorqueLimiting" Datatype="TO_Struct_TorqueLimiting" Version="7.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="LimitBase" Datatype="DInt" />
+          <Member Name="PositionBasedMonitorings" Datatype="DInt" />
+          <Member Name="LimitDefaults" Datatype="TO_Struct_TorqueLimitingLimitDefaults" Version="7.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="Torque" Datatype="LReal" />
+                <Member Name="Force" Datatype="LReal" />
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="LoadGear" Datatype="TO_Struct_LoadGear" Version="7.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="Numerator" Datatype="UDInt" />
+          <Member Name="Denominator" Datatype="UDInt" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DynamicLimits" Datatype="TO_Struct_DynamicLimits" Version="7.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="MaxVelocity" Datatype="LReal" />
+          <Member Name="Velocity" Datatype="LReal" />
+          <Member Name="MaxAcceleration" Datatype="LReal">
+            <StartValue>1000.0</StartValue>
+          </Member>
+          <Member Name="MaxDeceleration" Datatype="LReal">
+            <StartValue>1000.0</StartValue>
+          </Member>
+          <Member Name="MaxJerk" Datatype="LReal">
+            <StartValue>20000.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DynamicDefaults" Datatype="TO_Struct_DynamicDefaults" Version="7.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="Velocity" Datatype="LReal" />
+          <Member Name="Acceleration" Datatype="LReal">
+            <StartValue>200.0</StartValue>
+          </Member>
+          <Member Name="Deceleration" Datatype="LReal">
+            <StartValue>200.0</StartValue>
+          </Member>
+          <Member Name="Jerk" Datatype="LReal">
+            <StartValue>4000.0</StartValue>
+          </Member>
+          <Member Name="EmergencyDeceleration" Datatype="LReal">
+            <StartValue>1000.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="Override" Datatype="TO_Struct_Override" Version="7.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="Velocity" Datatype="LReal" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="Units" Datatype="TO_Struct_Units" Version="7.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="LengthUnit" Datatype="UDInt" />
+          <Member Name="VelocityUnit" Datatype="UDInt" />
+          <Member Name="TimeUnit" Datatype="UDInt" />
+          <Member Name="TorqueUnit" Datatype="UDInt" />
+          <Member Name="ForceUnit" Datatype="UDInt" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="StatusDrive" Datatype="TO_Struct_StatusDrive" Version="7.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="InOperation" Datatype="Bool" />
+          <Member Name="CommunicationOK" Datatype="Bool" />
+          <Member Name="Error" Datatype="Bool" />
+          <Member Name="AdaptionState" Datatype="DInt" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="StatusTorqueData" Datatype="TO_Struct_StatusTorqueData" Version="7.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="CommandAdditiveTorqueActive" Datatype="DInt" />
+          <Member Name="CommandTorqueRangeActive" Datatype="DInt" />
+          <Member Name="ActualTorque" Datatype="LReal" />
+          <Member Name="ActualForce" Datatype="LReal" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="StatusMotionIn" Datatype="TO_Struct_StatusMotionIn" Version="7.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="FunctionState" Datatype="DInt" />
+          <Member Name="StatusWord" Datatype="DWord" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="StatusWord" Datatype="DWord" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="StatusWord2" Datatype="DWord" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="ErrorWord" Datatype="DWord" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="ErrorDetail" Datatype="TO_Struct_ErrorDetail" Version="7.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="Number" Datatype="UDInt" />
+          <Member Name="Reaction" Datatype="DInt" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="WarningWord" Datatype="DWord" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="ControlPanel" Datatype="TO_Struct_ControlPanel" Version="7.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="Input" Datatype="TO_Struct_ControlPanelInput" Version="7.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="Command" Datatype="Array[1..2] of TO_Struct_ControlPanelInputCmd" Version="7.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="ReqCounter" Datatype="UDInt" />
+                      <Member Name="Type" Datatype="UDInt" />
+                      <Member Name="Position" Datatype="LReal" />
+                      <Member Name="Velocity" Datatype="LReal" />
+                      <Member Name="Acceleration" Datatype="LReal" />
+                      <Member Name="Deceleration" Datatype="LReal" />
+                      <Member Name="Jerk" Datatype="LReal" />
+                      <Member Name="Param" Datatype="LReal" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="TimeOut" Datatype="LReal" />
+                <Member Name="EsLifeSign" Datatype="UDInt" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="Output" Datatype="TO_Struct_ControlPanelOutput" Version="7.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="Command" Datatype="Array[1..2] of TO_Struct_ControlPanelOutputCmd" Version="7.0">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="AckCounter" Datatype="UDInt" />
+                      <Member Name="Error" Datatype="Bool" />
+                      <Member Name="ErrorID" Datatype="Word" />
+                      <Member Name="Done" Datatype="Bool" />
+                      <Member Name="Aborted" Datatype="Bool" />
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="RtLifeSign" Datatype="UDInt" />
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="InternalToTrace" Datatype="Array[1..4] of TO_Struct_Internal" Version="7.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="Id" Datatype="DInt" />
+          <Member Name="Value" Datatype="LReal" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="VirtualAxis" Datatype="TO_Struct_VirtualAxis" Version="7.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="Mode" Datatype="UDInt">
+            <StartValue>1</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="Simulation" Datatype="TO_Struct_AxisSimulation" Version="7.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="Mode" Datatype="UDInt" />
+        </Section>
+      </Sections>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>SpeedAxis_2</Name>
+      <Namespace />
+      <Number>3</Number>
+      <OfSystemLibElement>TO_SpeedAxis</OfSystemLibElement>
+      <OfSystemLibVersion>7.0</OfSystemLibVersion>
+      <ParameterData>
+<Parameters xmlns="http://www.siemens.com/automation/Openness/SW/Parameters/v1">
+  <Parameter Name="_Units.VelocityUnit" />
+  <Parameter Name="_Units.TorqueUnit" />
+  <Parameter Name="Actor.Type" />
+  <Parameter Name="Actor.Interface.EnableTorqueData" />
+  <Parameter Name="Actor.Interface.EnableDriveOutput" />
+  <Parameter Name="Actor.Interface.DriveReadyInput" />
+  <Parameter Name="VirtualAxis.Mode" Value="1" />
+  <Parameter Name="_Actor.Interface.EnableDriveOutputAddress" />
+  <Parameter Name="_Actor.Interface.DriveReadyInputAddress" />
+  <Parameter Name="_Actor.Interface.Telegram" />
+  <Parameter Name="_Actor.DataAdaptionOffline" />
+  <AdditionalData xmlns="http://www.siemens.com/automation/Openness/SW/Motion/Axis/v1">
+    <Connection Interface="Actor" />
+    <Connection Interface="Torque" />
+  </AdditionalData>
+</Parameters></ParameterData>
+      <ProgrammingLanguage>Motion_DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="3" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.TechnologicalObjects.TechnologicalInstanceDB>
+</Document>
