@@ -169,7 +169,7 @@
               <MultilingualTextItem ID="7" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>Network1-addin sss</Text>
+                  <Text>Network1-addin sssa</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
@@ -259,7 +259,7 @@
               <MultilingualTextItem ID="C" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
-                  <Text>test ok</Text>
+                  <Text>test ok bb</Text>
                 </AttributeList>
               </MultilingualTextItem>
             </ObjectList>
